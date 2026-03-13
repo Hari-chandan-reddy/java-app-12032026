@@ -10,6 +10,7 @@ public class Person {
     private String gender;
     private String dateOfBirth;
     private String cityOfBirth;
+    private String stateOfBirth;
     private String fatherName;
     private String motherName;
     private String husbandSpouseName;
@@ -18,7 +19,8 @@ public class Person {
 	}
 
 	public Person(int personId, String firstName, String middleName, String lastName, String gender, String dateOfBirth,
-			String cityOfBirth, String fatherName, String motherName, String husbandSpouseName) {
+			String cityOfBirth, String stateOfBirth, String fatherName, String motherName, String husbandSpouseName) {
+		super();
 		this.personId = personId;
 		this.firstName = firstName;
 		this.middleName = middleName;
@@ -26,6 +28,7 @@ public class Person {
 		this.gender = gender;
 		this.dateOfBirth = dateOfBirth;
 		this.cityOfBirth = cityOfBirth;
+		this.stateOfBirth = stateOfBirth;
 		this.fatherName = fatherName;
 		this.motherName = motherName;
 		this.husbandSpouseName = husbandSpouseName;
@@ -57,6 +60,10 @@ public class Person {
 
 	public String getCityOfBirth() {
 		return cityOfBirth;
+	}
+
+	public String getStateOfBirth() {
+		return stateOfBirth;
 	}
 
 	public String getFatherName() {
@@ -99,6 +106,10 @@ public class Person {
 		this.cityOfBirth = cityOfBirth;
 	}
 
+	public void setStateOfBirth(String stateOfBirth) {
+		this.stateOfBirth = stateOfBirth;
+	}
+
 	public void setFatherName(String fatherName) {
 		this.fatherName = fatherName;
 	}
@@ -115,14 +126,14 @@ public class Person {
 	public String toString() {
 		return "Person [personId=" + personId + ", firstName=" + firstName + ", middleName=" + middleName
 				+ ", lastName=" + lastName + ", gender=" + gender + ", dateOfBirth=" + dateOfBirth + ", cityOfBirth="
-				+ cityOfBirth + ", fatherName=" + fatherName + ", motherName=" + motherName + ", husbandSpouseName="
-				+ husbandSpouseName + "]";
+				+ cityOfBirth + ", stateOfBirth=" + stateOfBirth + ", fatherName=" + fatherName + ", motherName="
+				+ motherName + ", husbandSpouseName=" + husbandSpouseName + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		return Objects.hash(cityOfBirth, dateOfBirth, fatherName, firstName, gender, husbandSpouseName, lastName,
-				middleName, motherName, personId);
+				middleName, motherName, personId, stateOfBirth);
 	}
 
 	@Override
@@ -138,6 +149,7 @@ public class Person {
 				&& Objects.equals(fatherName, other.fatherName) && Objects.equals(firstName, other.firstName)
 				&& Objects.equals(gender, other.gender) && Objects.equals(husbandSpouseName, other.husbandSpouseName)
 				&& Objects.equals(lastName, other.lastName) && Objects.equals(middleName, other.middleName)
-				&& Objects.equals(motherName, other.motherName) && personId == other.personId;
+				&& Objects.equals(motherName, other.motherName) && personId == other.personId
+				&& Objects.equals(stateOfBirth, other.stateOfBirth);
 	}
 }
