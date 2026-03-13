@@ -7,7 +7,7 @@ import com.codegnan.javaapp12032026.entity.Person;
 public class MainProgram {
 
 	public static void main(String[] args) {
-		Person person = new Person(105, "Virat", "", "Kohli", "Male", "1988-11-05", "Delhi", "Prem Kohli", "Saroj Kohli", "Anushka Sharma");
+		Person person = new Person(105, "Virat", "", "Kohli", "Male", "1988-11-05", "Delhi", "Delhi", "Prem Kohli", "Saroj Kohli", "Anushka Sharma");
 		Passport passport = new Passport(5, "E789123456", "Regular", "2021-11-05", "2031-11-04", "Bangalore", "Karnataka", 105);
 		
 		PassportDao passportdao = new PassportDao();
